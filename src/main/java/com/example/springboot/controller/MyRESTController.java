@@ -20,36 +20,36 @@ public class MyRESTController {
         return employees;
     }
 
-//    @GetMapping("/employees/{id}")
-//    Employee getEmployee(@PathVariable int id) {
-//        Employee employee = service.getEmployee(id);
+    @GetMapping("/employees/{id}")
+    Employee getEmployee(@PathVariable int id) {
+        Employee employee = service.getEmployee(id);
 //        if (employee==null) {
 //            throw new NoSuchEmployeeException("Пользователь с ID = " + id + " не найден в БД");
 //        }
-//        return employee;
-//    }
-//
-//    @PostMapping("/employees")
-//    Employee addEmployee(@RequestBody Employee employee) {
-//        service.saveEmployee(employee);
-//        return employee;
-//    }
-//
-//    @PutMapping("/employees")
-//    Employee updateEmployee(@RequestBody Employee employee) {
-//        service.saveEmployee(employee);
-//        return employee;
-//    }
-//
-//    @DeleteMapping("/employees/{id}")
-//    String deleteEmployee(@PathVariable int id) {
-//        Employee employee = service.getEmployee(id);
+        return employee;
+    }
+
+    @PostMapping("/employees")
+    Employee addEmployee(@RequestBody Employee employee) {
+        service.saveEmployee(employee);
+        return employee;
+    }
+
+    @PutMapping("/employees")
+    Employee updateEmployee(@RequestBody Employee employee) {
+        service.saveEmployee(employee);
+        return employee;
+    }
+
+    @DeleteMapping("/employees/{id}")
+    String deleteEmployee(@PathVariable int id) {
+        Employee employee = service.getEmployee(id);
 //        if (employee == null) {
 //            throw new NoSuchEmployeeException("There is no employee with id = " + id);
 //        }
-//        service.deleteEmployee(id);
-//        return "Employee with id = " + id + " was deleted";
-//    }
+        service.deleteEmployee(id);
+        return "Employee with id = " + id + " was deleted";
+    }
 
 }
 
